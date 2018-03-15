@@ -1,5 +1,5 @@
 {
-  "name": "ChronosApp",
+  "name": "chronos-app",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -13,7 +13,8 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js"
+    "test": "node node_modules/jest/bin/jest.js",
+    "build":  "npm start"
   },
   "jest": {
     "preset": "jest-expo"

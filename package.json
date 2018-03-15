@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-native-scripts": "1.11.1",
+    "gradle": "^1.0.9",
     "jest-expo": "25.0.0",
+    "react-native-scripts": "1.11.1",
     "react-test-renderer": "16.2.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -26,5 +27,9 @@
     "react-native-router-flux": "^4.0.0-beta.28",
     "react-navigation": "^1.5.1",
     "util": "*"
+  },
+  "engines": {
+    "node": "7.2.0",
+    "npm": "4.6.1"
   }
 }

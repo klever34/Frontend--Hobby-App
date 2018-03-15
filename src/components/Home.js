@@ -20,7 +20,9 @@ import Logo from '../components/Logo';
 
 export default class Home extends React.Component {
     static navigationOptions = {
-        title: "Hobby"
+        title: "Add Hobby",
+        headerStyle: { backgroundColor: '#263238' },
+        headerTitleStyle: { color: '#fff' },
       }
 constructor(props){
     super(props);

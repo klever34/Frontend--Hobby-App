@@ -22,7 +22,9 @@ import { Communications } from 'react-native-communications';
 
 export default class Signup extends React.Component {
     static navigationOptions = {
-        title: "Sign Up"
+        title: "Sign Up",
+        headerStyle: { backgroundColor: '#263238' },
+        headerTitleStyle: { color: '#fff' },
       }
     constructor(props){
         super(props);
@@ -38,6 +40,7 @@ export default class Signup extends React.Component {
           } 
           else {
             this.postUserData();
+            this.props.navigation.goBack();
           }
        
     }
@@ -76,6 +79,7 @@ export default class Signup extends React.Component {
         });
 
         
+        this.textInput.clear()
         this.textInput1.clear()
         this.textInput2.clear()
         this.textInput3.clear()
@@ -84,6 +88,8 @@ export default class Signup extends React.Component {
     render() {
         const { state, navigate } = this.props.navigation;
         return (
+            <ScrollView >
+  
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <Logo />
                 <View>
@@ -114,6 +120,7 @@ export default class Signup extends React.Component {
                     style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)'
                     placeholder= "Phone e.g +2348132937571"
                     placeholderTextColor = "#FFFFFF" 
+                    keyboardType = "numeric"
                     onChangeText={(phone) => this.setState({phone})}/>
 
                 <TouchableOpacity onPress={() => this.multipleActions()} style={styles.button}>
@@ -125,6 +132,7 @@ export default class Signup extends React.Component {
                     <TouchableOpacity onPress={() => this.props.navigation.goBack()} ><Text style={styles.signupButton}>Sign in</Text></TouchableOpacity>
                 </View>
             </KeyboardAvoidingView>
+            </ScrollView>
             
         )
     }

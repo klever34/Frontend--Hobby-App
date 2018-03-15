@@ -24,7 +24,9 @@ import { Actions } from 'react-native-router-flux';
 
 export default class Login extends React.Component {
     static navigationOptions = {
-        title: "Login"
+        title: "Login",
+        headerStyle: { backgroundColor: '#263238' },
+        headerTitleStyle: { color: '#fff' },
       }
 
 constructor(props){
@@ -105,6 +107,7 @@ getUserData(){
                     placeholder= "Email"
                     keyboardType = "email-address"
                     placeholderTextColor = "#FFFFFF"
+                    autoCapitalize = "none"
                     onChangeText={(email) => this.setState({email})}/>
 
                 <TextInput 

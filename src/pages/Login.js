@@ -99,6 +99,7 @@ getUserData(){
     const { navigate } = this.props.navigation;
 
         return (
+            
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <Logo />
                 <View>
